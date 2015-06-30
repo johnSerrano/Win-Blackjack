@@ -1,0 +1,114 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="johnserrano.winblackjack.PlayActivity">
+
+    <TextView
+        android:id="@+id/dealerholds"
+        android:text="@string/Dealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/dealerval"
+        android:text="0"
+        android:layout_below="@id/dealerholds"
+        android:textSize="90sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/hitstaybuttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+             <Button
+                 android:id="@+id/hitbutton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Hit"
+                android:onClick="hit"/>
+
+            <Button
+                android:id="@+id/standbutton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Stand"
+                android:onClick="stay"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/doublebutton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Double"
+                android:onClick="_double"/>
+
+            <Button
+                android:id="@+id/splitbutton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Split"
+                android:onClick="split"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/youhold"
+        android:id="@+id/youholdtext"
+        android:layout_below="@id/hitstaybuttons"
+        android:textSize="25sp"
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@id/youholdtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/playercard1"
+            android:text="0"
+            android:textSize="90sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/playercard2"
+            android:text="0"
+            android:textSize="90sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/continuebutton"
+        android:layout_alignParentBottom="true"
+        android:text="CONTINUE"
+        android:layout_width="fill_parent"
+        android:layout_height="50sp"
+        android:visibility="invisible"
+        android:onClick="continueClicked"/>
+
+</RelativeLayout>

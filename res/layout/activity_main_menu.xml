@@ -1,0 +1,56 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00bbff"
+    tools:context=".MainMenu">
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#ff00e6ff"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="top"
+        android:text="@string/dummy_content" />
+
+        <LinearLayout
+            android:fitsSystemWindows="true"
+            android:id="@+id/frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <Button
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Play_button"
+                android:id="@+id/playbutton"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="openPlayActivity"
+                />
+
+            <Button
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Table_button"
+                android:id="@+id/tablebutton"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="openTableActivity"
+                />
+
+            <Button
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:text="@string/Settings_button"
+                android:id="@+id/settingsbutton"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="openSettingsActivity"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+</FrameLayout>
