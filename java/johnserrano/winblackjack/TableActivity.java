@@ -5,6 +5,11 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+//TODO: this whole file
+//this activity allows the user to look up a specific hand
 
 
 public class TableActivity extends Activity {
@@ -13,6 +18,20 @@ public class TableActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
+
+        //populate spinners
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.cards, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Spinner dealerSpinner = (Spinner) findViewById(R.id.dealerSpinner);
+        dealerSpinner.setAdapter(adapter);
+
+        Spinner playerSpinner1 = (Spinner) findViewById(R.id.playerSpinner1);
+        playerSpinner1.setAdapter(adapter);
+
+        Spinner playerSpinner2 = (Spinner) findViewById(R.id.playerSpinner2);;
+        playerSpinner2.setAdapter(adapter);
     }
 
     @Override
