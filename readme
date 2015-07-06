@@ -10,12 +10,8 @@ Shows a hand, including what cards you hold and what card the dealer
 shows. You then select hit, stand, double, or split. The app informs
 you if you were correct, and if not, informs you what the optimal
 move was. 
+Additionally, this app includes a spreadsheet of the optimal moves
+for reference.
 
 What this app does not do:
 Teach you how to count cards.
-
-What this app will do in the future:
-//When all the features in this category are included, 
-//I will consider the app ready for release on the 
-//Google Play store, free of charge and without ads.
-1. Allow a user to look up the optimal move given any hand.

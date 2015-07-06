@@ -33,21 +33,9 @@
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <Spinner
+    <ImageView
+        android:src="@drawable/bjsheet"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dealerSpinner" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/playerSpinner1"
-        android:layout_below="@id/dealerSpinner"/>
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/playerSpinner2"
-        android:layout_below="@id/playerSpinner1"/>
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
